@@ -1,0 +1,228 @@
+/*
+Theme Name: Coffee shop theme
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Nadia
+Author URI: https://wordpress.org/
+Description: Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors.
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Version: 1.0
+Requires at least: 6.2
+Tested up to: 6.2
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: coffeeshoptheme
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@400;500;600&display=swap');
+
+body {
+    background-color: rgb(243, 243, 243);
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* try not to repeat yourself */
+.header,
+.menu,
+.footer,
+.title,
+.drinks,
+.title-search,
+.content-search,
+.searchbar-page {
+    display: flex;
+}
+
+.footer,
+.title,
+.drinks,
+.content-search,
+.searchbar-page,
+.header {
+    justify-content: center;
+}
+
+.title-search,
+.drinks,
+.content-search,
+.header {
+    align-items: center;
+}
+
+.header,
+.title-search {
+    justify-content: space-evenly;
+}
+
+/* --- header - menu - footer --- */
+.header {
+    background-color: white;
+    width: 100%;
+    height: 5rem;
+    position: sticky;
+    top: 0;
+    border-bottom: 0.05rem solid black;
+    z-index: 50;
+}
+
+.custom-logo {
+    width: 5rem;
+    height: 4.8rem;
+}
+
+.menu {
+    column-gap: 5rem;
+    list-style-type: none;
+    font-weight: bold;
+}
+
+.menu-item:hover,
+.drinks-title:hover {
+    border-bottom: 0.1rem solid black;
+    transition: all;
+}
+
+.footer {
+    background-color: white;
+    border-top: 0.05rem solid black;
+    z-index: 40;
+}
+
+.footer-info {
+    margin: 1rem 0 1rem 0;
+}
+
+/* --- title and text --- */
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.title {
+    font-size: 2.2rem;
+}
+
+.title,
+.drinks-title,
+.title-search {
+    font-family: 'Bodoni Moda', serif;
+}
+
+.title-search {
+    margin-left: 28.5rem;
+}
+
+.excerpt-title {
+    font-size: 1.4rem;
+}
+
+.seemore-btn {
+    font-size: 1rem;
+}
+
+.seemore-btn:hover {
+    color: rgba(0, 0, 0, 0.500);
+}
+
+/* --- menu page --- */
+
+.menu-page,
+.coffees,
+.teas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.drinks,
+.content-search {
+    flex-direction: column;
+}
+
+.drinks-price {
+    font-weight: 500;
+}
+
+.drinks-figure,
+.size-thumbnail {
+    border-radius: 0.5rem;
+}
+
+.drinks-figure {
+    width: 15rem;
+    height: 20rem;
+    position: relative;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.200);
+}
+
+.size-thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 0 1px black;
+}
+
+.is-layout-flex {
+    column-gap: 1.8rem;
+}
+
+.has-text-align-center {
+    margin-right: 15.5rem;
+}
+
+/* --- search --- */
+
+.search-main {
+    margin: 2rem 0 2rem 0;
+}
+
+.input-s {
+    border: none;
+    border-bottom: 0.12rem black solid;
+    width: 12rem;
+    height: 2rem;
+    background: none;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+}
+
+.center-searchpage {
+    margin-left: 1.5rem;
+}
+
+
+/* --- homepage --- */
+.hero {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 51%, rgba(197, 239, 157, 0.767) 96%);
+    width: 100%;
+    height: 50rem;
+    position: relative;
+}
+
+.title-hero,
+.hero-items {
+    position: absolute;
+}
+
+.hero-item {
+    background-color: rgb(200, 199, 199);
+    width: 30rem;
+    height: 20rem;
+}
+
+.main {
+    margin: 2rem 2rem 2rem 2rem;
+}
